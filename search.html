@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1,maximum-scale=1, user-scalable=no">
+	<meta name="apple-mobile-web-app-capable" content="yes">
+	<meta name="apple-mobile-web-app-status-bar-style" content="black">
+	<link rel="stylesheet" href="css/mui.min.css">
+	<link rel="stylesheet" href="css/home.css">
+	<link rel="stylesheet" type="text/css" href="css/icons-extra.css" />
+	<link rel="stylesheet" type="text/css" href="css/app.css"/>
+	<title>旅游网-搜索</title>
+	
+	
+</head>
+
+<body>
+<div class="mui-content" style="padding:15px">
+		<div class="mui-input-row mui-search">
+			<input type="search" class="mui-input-clear" placeholder="">
+			<a  class="mui-action-back mui-icon  mui-pull-right" style="position:absolute; right:10px; z-index:9999; font-size:14px; color:#999; top:12px">取消</a>
+		</div>
+		<div class="mui-content-padded">
+		<h5>热门城市</h5>
+		<span class="mui-badge">上海</span>
+		<span class="mui-badge mui-badge-purple">广州</span>
+		<span class="mui-badge">武汉</span>
+		<span class="mui-badge mui-badge-primary">绍兴</span>
+		<span class="mui-badge mui-badge-primary">杭州</span>
+		<span class="mui-badge mui-badge-success">常州</span>
+		<span class="mui-badge mui-badge-success">北京</span>
+		<span class="mui-badge mui-badge-warning">黄山</span>
+		<span class="mui-badge mui-badge-danger">三亚</span>
+	</div>
+	<div class="mui-content-padded">
+		<h5>热门搜索</h5>
+		<span class="mui-badge">乌镇</span>
+		<span class="mui-badge mui-badge-primary">云南</span>
+		<span class="mui-badge mui-badge-success">三亚</span>
+		<span class="mui-badge mui-badge-warning">张家界</span>
+		<span class="mui-badge mui-badge-danger">千岛湖</span>
+		<span class="mui-badge mui-badge-purple">普陀山</span>
+		<span class="mui-badge">横店</span>
+		<span class="mui-badge mui-badge-primary">莫千山</span>
+		<span class="mui-badge mui-badge-success">安吉</span>
+	</div>
+	<div class="mui-content-padded">
+		<h5>热门主题</h5>
+		<span class="mui-badge">上海迪士尼乐园</span>
+		<span class="mui-badge mui-badge-primary">开心驴行</span>
+		<span class="mui-badge mui-badge-success">周边盛景</span>
+		<span class="mui-badge mui-badge-warning">摄影</span>
+		<span class="mui-badge mui-badge-danger">家庭亲子</span>
+		<span class="mui-badge mui-badge-purple">针织衫</span>
+		<span class="mui-badge">开心周末</span>
+		<span class="mui-badge mui-badge-primary">凤凰古镇</span>
+		<span class="mui-badge mui-badge-success">美丽云南</span>
+	</div>
+
+</div>
+<script src="js/mui.min.js"></script>
+<script>
+    mui.init({
+        swipeBack: true //启用右滑关闭功能
+    });
+    //语音识别完成事件
+    document.getElementById("search").addEventListener('recognized', function(e) {
+        console.log(e.detail.value);
+    });
+
+    var nativeWebview, imm, InputMethodManager;
+    var initNativeObjects = function() {
+        if (mui.os.android) {
+            var main = plus.android.runtimeMainActivity();
+            var Context = plus.android.importClass("android.content.Context");
+            InputMethodManager = plus.android.importClass("android.view.inputmethod.InputMethodManager");
+            imm = main.getSystemService(Context.INPUT_METHOD_SERVICE);
+        } else {
+            nativeWebview = plus.webview.currentWebview().nativeInstanceObject();
+        }
+    };
+    var showSoftInput = function() {
+        if (mui.os.android) {
+            imm.toggleSoftInput(0, InputMethodManager.SHOW_FORCED);
+        } else {
+            nativeWebview.plusCallMethod({
+                "setKeyboardDisplayRequiresUserAction": false
+            });
+        }
+        setTimeout(function() {
+            var inputElem = document.querySelector('input');
+            inputElem.focus();
+            inputElem.parentNode.classList.add('mui-active'); //第一个是search，加上激活样式
+        }, 200);
+    };
+    mui.plusReady(function() {
+        initNativeObjects();
+        showSoftInput();
+    });
+
+</script>
+</body>
+
+
+</html>

@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1,maximum-scale=1, user-scalable=no">
+	<meta name="apple-mobile-web-app-capable" content="yes">
+	<meta name="apple-mobile-web-app-status-bar-style" content="black">
+	<link rel="stylesheet" href="css/mui.min.css">
+	<link rel="stylesheet" href="css/home.css">
+	<link rel="stylesheet" type="text/css" href="css/icons-extra.css" />
+	<link rel="stylesheet" type="text/css" href="css/app.css"/>
+	<title>活动报名</title>
+</head>
+<body>
+
+
+<header class="mui-bar mui-bar-nav aui-header b-line">
+	<a class="mui-action-back mui-icon mui-icon-arrowleft mui-pull-left"></a>
+	<h1 class="mui-title">活动报名</h1>
+	<a class="mui-icon mui-icon-paperplane mui-pull-right"></a>
+</header>
+<div class="mui-content">
+<div class="mui-card">
+		<div class="order_box border_3">
+	        	<h1 class="order_name"><span>报名信息</span></h1>
+		 		
+		 	<div class="devider"></div>
+			<ul class="mui-table-view ">
+			<li class="mui-table-view-cell b-line">联系人: <span class="mui-pull-right">
+				<input type="text" class="inputfield" placeholder="请输入姓名"   /></span></li>
+			<li class="mui-table-view-cell b-line">联系手机: <span class="mui-pull-right">
+				<input type="text" class="inputfield" placeholder="联系方式"   /></span>
+			</li>
+				<li class="mui-table-view-cell b-line">人数: <span class="mui-pull-right">
+				<input type="text" class="inputfield" placeholder="参与活动人数量" value="1"  /></span>
+			</li>
+				<li class="mui-table-view-cell b-line">备注:
+					<textarea id="textarea" style="border:none;margin-left:40px;margin-top:-30px;width:98%;" placeholder="留言..." rows="6"></textarea>
+				</li>	
+			</ul>
+		</div>
+	</div>
+	<div style="height:100px"></div>
+	</div>
+	<nav class="mui-bar mui-bar-tab" style="">
+	<div class="t-line aui-on-cell">
+
+		<div class="aui-onc">
+			<a href="alipay.html" class="aui-got" style="padding:0 40px">提交信息</a>
+		</div>
+	</div>
+
+
+
+
+	<script src="js/mui.min.js"></script>
+	<script>
+        mui.init({
+            swipeBack: true //启用右滑关闭功能
+        });
+        (function($) {
+            $('#scroll').scroll({
+                indicators: true //是否显示滚动条
+            });
+            var segmentedControl = document.getElementById('segmentedControl');
+            $('.mui-input-group').on('change', 'input', function() {
+                if (this.checked) {
+                    var styleEl = document.querySelector('input[name="style"]:checked');
+                    var colorEl = document.querySelector('input[name="color"]:checked');
+                    if (styleEl && colorEl) {
+                        var style = styleEl.value;
+                        var color = colorEl.value;
+                        segmentedControl.className = 'mui-segmented-control' + (style ? (' mui-segmented-control-' + style) : '') + ' mui-segmented-control-' + color;
+                    }
+                }
+            });
+        })(mui);
+	</script>
+</div>
+<script src="js/mui.min.js"></script>
+
+
+
+</body>
+</html>

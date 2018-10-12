@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1,maximum-scale=1, user-scalable=no">
+	<meta name="apple-mobile-web-app-capable" content="yes">
+	<meta name="apple-mobile-web-app-status-bar-style" content="black">
+	<link rel="stylesheet" href="css/mui.min.css">
+	<link rel="stylesheet" href="css/home.css">
+	<link rel="stylesheet" type="text/css" href="css/icons-extra.css" />
+	<link rel="stylesheet" type="text/css" href="css/app.css"/>
+	<title>旅游网</title>
+	<style>
+		html,
+		body {
+			background-color: #efeff4;
+		}
+
+		.mui-bar .mui-pull-left .mui-icon {
+			padding-right: 5px;
+			font-size: 28px;
+		}
+
+		.mui-bar .mui-btn {
+			font-weight: normal;
+			font-size: 17px;
+		}
+
+		.mui-bar .mui-btn-link {
+			top: 1px;
+		}
+
+		.mui-content img{
+			width: 100%;
+		}
+		.hm-description{
+			margin: 15px;
+		}
+
+		.hm-description>li {
+			font-size: 14px;
+			color: #8f8f94;
+		}
+
+
+	</style>
+</head>
+<body>
+
+
+
+
+
+<header id="header" class="mui-bar mui-bar-transparent">
+	<a class="mui-action-back mui-icon mui-icon-arrowleft mui-pull-left" style="color:#666"></a>
+	<h1 class="mui-title"></h1>
+	<a class="mui-icon mui-icon-paperplane mui-pull-right" style="color:#666"></a>
+</header>
+
+<div class="mui-content" style="background:#fff;">
+	<div id="slider" class="mui-slider" >
+		<div class="mui-slider-group">
+			<div class="mui-slider-item">
+				<a href="#">
+					<img src="images/img-loop1.jpg">
+				</a>
+			</div>
+			<div class="mui-slider-item">
+				<a href="#">
+					<img src="images/img-loop1.png">
+				</a>
+			</div>
+		</div>
+		<div class="mui-slider-indicator">
+			<div class="mui-indicator mui-active"></div>
+			<div class="mui-indicator"></div>
+		</div>
+	</div>
+	<div class="aui-title-h b-line">
+		<div class="address"><p>上海市宝山区顾村镇沪太路4788号环岛路1号 </p> </div>
+	
+	</div>
+	<div class="devider b-line"></div>
+	<div class="">
+		<div style="padding:0 10px; margin-top:10px"class="">
+			<div id="segmentedControl" class="mui-segmented-control mui-segmented-control-inverted mui-segmented-control-primary">
+				<a class="mui-control-item mui-active" href="#item1">图文详情</a>
+				<a class="mui-control-item" href="#item2">预定须知</a>
+				<a class="mui-control-item" href="#item3">TA说</a>
+
+			</div>
+		</div>
+		<div>
+			<div id="item1" class="mui-control-content mui-active" style="height:1200px;height:auto;">
+				<div class="aui-p">
+					<p>酒店坐落于上海大虹桥板块西北部，地处华漕镇，位于纪翟路1199弄，毗邻北翟路高架，离地铁2号线徐泾东约3公里，有直达公交189区间到地铁站，驾车15分钟可到达，轨道交通可直达上海火车站，上海南站等市中心繁华地段...</p>
+				</div>
+				<div class="aui-kill aui-op"><img src="images/img-loop1.png" alt=""></div>
+				<div class="aui-kill aui-op"><img src="images/bd2.jpg" alt=""></div>
+				<div class="aui-kill aui-op"><img src="images/img-loop1.png" alt=""></div>
+				<div class="aui-kill aui-op"><img src="images/img-loop1.jpg" alt=""></div>
+			</div>
+
+			<div id="item2" class="mui-control-content">
+					<div class="aui-p">
+					<p>酒店坐落于上海大虹桥板块西北部，地处华漕镇，位于纪翟路1199弄，毗邻北翟路高架，离地铁2号线徐泾东约3公里，有直达公交189区间到地铁站，驾车15分钟可到达，轨道交通可直达上海火车站，上海南站等市中心繁华地段...</p>
+				</div>
+
+			</div>
+			<div id="item3" class="mui-control-content">
+				<div class="mui-content">
+ 
+
+	<div class="mui-card">
+		<div class="mui-card-header mui-card-media">
+			<img src="images/ad2.jpg">
+			<div class="mui-media-body">
+				徐萌小小
+				<p>发表于 2018-05-02 15:30</p>
+			</div>
+ 
+		</div>
+		<div class="mui-card-content">
+			<div class="mui-card-content-inner">
+				<!--<p>Posted on May 02, 2018</p>-->
+				<p style="color: #333;text-indent:20px"> 	不错不错不错不错不错不错不错不错不错不错不错不错不错不错不错不错。 	</p>
+			</div>
+			</div>
+		 
+	</div>
+</div>
+			</div>
+		</div>
+	</div>
+	<script>
+        mui.init({
+            swipeBack: true //启用右滑关闭功能
+        });
+        (function($) {
+            $('#scroll').scroll({
+                indicators: true //是否显示滚动条
+            });
+            var segmentedControl = document.getElementById('segmentedControl');
+            $('.mui-input-group').on('change', 'input', function() {
+                if (this.checked) {
+                    var styleEl = document.querySelector('input[name="style"]:checked');
+                    var colorEl = document.querySelector('input[name="color"]:checked');
+                    if (styleEl && colorEl) {
+                        var style = styleEl.value;
+                        var color = colorEl.value;
+                        segmentedControl.className = 'mui-segmented-control' + (style ? (' mui-segmented-control-' + style) : '') + ' mui-segmented-control-' + color;
+                    }
+                }
+            });
+        })(mui);
+	</script>
+
+
+	<div style="height:100px"></div>
+</div>
+
+
+
+<div style="height:50px"></div>
+<nav class="mui-bar mui-bar-tab">
+	<div class="t-line aui-on-cell">
+		<div class="aui-ons">
+			<a href="#"><span class="mui-icon-extra mui-icon-extra-addpeople"></span><i>客服</i></a>
+			<a href="#"><span class="mui-icon-extra mui-icon-extra-heart-filled"></span><i>收藏</i></a>
+		</div>
+		<div class="aui-onc">
+			<a href="#" style="margin-right:-4px">加入购物车</a>
+			<a href="order.html" class="aui-got">立即购买</a>
+		</div>
+	</div>
+
+
+
+</nav>
+<script src="js/mui.min.js"></script>
+<script type="text/javascript">
+    mui.init({
+        swipeBack: true //启用右滑关闭功能
+    });
+    var slider = document.getElementById("slider");
+    mui('.mui-input-group').on('change', 'input', function() {
+        if (this.checked) {
+            switch (this.value) {
+                case 'static':
+                    document.getElementById("img1").className = "";
+                    document.getElementById("slider").classList.add("mui-hidden");
+                    break;
+                case 'slider':
+                    document.getElementById("img1").className = "mui-hidden";
+                    if(slider.classList.contains("mui-hidden")){
+                        document.getElementById("slider").classList.remove("mui-hidden");
+                    }
+                    break;
+            }
+        }
+    });
+</script>
+
+
+
+</body>
+</html>

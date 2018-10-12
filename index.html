@@ -1,0 +1,180 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1,maximum-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="stylesheet" href="css/mui.min.css">
+    <link rel="stylesheet" href="css/home.css">
+    <link rel="stylesheet" type="text/css" href="css/icons-extra.css" />
+    <link rel="stylesheet" type="text/css" href="css/app.css" />
+    <title>旅游网</title>
+    <body>
+
+        <header class="mui-bar mui-bar-nav aui-header b-line">
+            <a class=" mui-icon mui-icon-search mui-pull-left" href="search.html"></a>
+            <h1 class="mui-title">旅游网</h1>
+            <a class=" mui-icon mui-icon-chatbubble mui-pull-right" href="dope.html"></a>
+        </header>
+        <div class="mui-content">
+            <div id="slider" class="mui-slider">
+                <div class="mui-slider-group mui-slider-loop">
+                    <!-- 额外增加的一个节点(循环轮播：第一个节点是最后一张轮播) -->
+                    <div class="mui-slider-item mui-slider-item-duplicate">
+                        <a href="page.html">
+                            <img src="images/img-loop1.jpg">
+                        </a>
+                    </div>
+                    <!-- 第一张 -->
+                    <div class="mui-slider-item">
+                        <a href="page.html">
+                            <img src="images/img-loop2.jpg">
+                        </a>
+                    </div>
+                    <!-- 第二张 -->
+                    <div class="mui-slider-item">
+                        <a href="page.html">
+                            <img src="images/img-loop1.jpg" style="height:266px;">
+                        </a>
+                    </div>
+                    <!-- 第三张 -->
+                    <div class="mui-slider-item">
+                        <a href="page.html">
+                            <img src="images/img-loop3.jpg">
+                        </a>
+                    </div>
+                    <!-- 第四张 -->
+                    <div class="mui-slider-item">
+                        <a href="page.html">
+                            <img src="images/banner1.jpg">
+                        </a>
+                    </div>
+                    <!-- 额外增加的一个节点(循环轮播：最后一个节点是第一张轮播) -->
+                    <div class="mui-slider-item mui-slider-item-duplicate">
+                        <a href="page.html">
+                            <img src="images/banner1.jpg">
+                        </a>
+                    </div>
+                </div>
+                <div class="mui-slider-indicator">
+                    <div class="mui-indicator mui-active"></div>
+                    <div class="mui-indicator"></div>
+                    <div class="mui-indicator"></div>
+                    <div class="mui-indicator"></div>
+                </div>
+            </div>
+
+            <div class="devider t-line"></div>
+            <div class="aui-hot t-line">
+                <div>
+                    <div class="ph-lvyou-nav">
+                        <a href="#">自由行</a>
+                        <a href="#">跟团</a>
+                        <a href="#">酒店</a>
+                    </div>
+                    <div class="lvyou-pane">
+                        <div class="lvyou-list">
+                            <div class="lv-item">自然风光</div>
+                            <div class="lv-item">温泉</div>
+                            <div class="lv-item">公园游乐场</div>
+                        </div>
+                        <div class="lvyou-list">
+                            <div class="lv-item">自然风光</div>
+                            <div class="lv-item">温泉</div>
+                            <div class="lv-item">公园游乐场</div>
+                        </div>
+                        <div class="lvyou-list">
+                            <div class="lv-item">自然风光</div>
+                            <div class="lv-item">温泉</div>
+                            <div class="lv-item">公园游乐场</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- -----  End  --- -->
+        <div class="devider t-line"></div>
+        <div class="aui-hot aui-list t-line">
+            <div class="">
+                <section class="common" id="nav" dd_name="排序区">
+                    <ul>
+                        <li><a class="on" href="javascript:void(0);" dd_name="默认" data-status="default_0"><del>默认</del></a></li>
+                        <li><a href="javascript:void(0);" dd_name="热度" data-status="hot_1"><del>热度<i class="arrow_up"></i><i class="arrow_down"></i></del></a></li>
+                        <li><a href="javascript:void(0);" dd_name="省市" data-status="publishdate_0">省市</a></li>
+                        <li><a href="javascript:void(0);" dd_name="好评" data-status="score_1">好评</a></li>
+
+                    </ul>
+                </section>
+            </div>
+            <div class="pdetail">
+                <a href="page.html"><img src="images/img-loop1.jpg" alt=""></a>
+                <div class="pbottom">
+                    <ul>
+                        <li class="price"><a href="#">155元</a></li>
+                        <li class="shouchang"><a href="#">收藏</a></li>
+                        <li class="share"><a href="#">分享</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="pdetail">
+                <a href="page.html"><img src="images/img-loop2.jpg" alt=""></a>
+                <div class="pbottom">
+                    <ul>
+                        <li class="price"><a href="#">155元</a></li>
+                        <li class="shouchang"><a href="#">收藏</a></li>
+                        <li class="share"><a href="#">分享</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        </div>
+
+
+        <div style="height:50px"></div>
+        <nav class="mui-bar mui-bar-tab">
+            <div class="t-line">
+                <a href="index.html" class="aui-tab-item mui-active">
+                    <span class="mui-icon mui-icon-home"></span>
+                    <span class="mui-tab-label">首页</span>
+                </a>
+                <a href="category.html" class="aui-tab-item">
+                    <span class="mui-icon mui-icon-extra mui-icon-extra-class"></span>
+                    <span class="mui-tab-label">分类</span>
+                </a>
+                <a class="aui-tab-item" href="car.html">
+                    <span class="mui-icon mui-icon-extra mui-icon-extra-cart"></span>
+                    <span class="mui-tab-label">购物车</span>
+                </a>
+                <a class="aui-tab-item" href="me.html">
+                    <span class="mui-icon mui-icon-extra mui-icon-extra-people"></span>
+                    <span class="mui-tab-label">我的</span>
+                </a>
+            </div>
+        </nav>
+        <script src="js/mui.min.js"></script>
+        <script type="text/javascript" charset="utf-8">
+            mui.init({
+                swipeBack: true //启用右滑关闭功能
+            });
+            var slider = mui("#slider");
+            document.getElementById("switch").addEventListener('toggle', function (e) {
+                if (e.detail.isActive) {
+                    slider.slider({
+                        interval: 5000
+                    });
+                } else {
+                    slider.slider({
+                        interval: 0
+                    });
+                }
+            });
+        </script>
+        <script>
+            mui.init();
+        </script>
+
+    </body>
+</html>
